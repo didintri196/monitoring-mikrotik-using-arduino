@@ -1,0 +1,28 @@
+1. Buat NETWATCH PING 8.8.8.8
+
+2. Paste kode berikut di netwatch up
+----------------------------------------------------------------------------------------
+/system scheduler disable [find name=internet-off]
+/system scheduler enable [find name=internet-on]
+----------------------------------------------------------------------------------------
+
+3. Paste kode berikut di netwatch down
+----------------------------------------------------------------------------------------
+/system scheduler disable [find name=internet-on]
+/system scheduler enable [find name=internet-off]
+----------------------------------------------------------------------------------------
+
+4. Buat scheduler
+nama : internet-on
+script : 
+----------------------------------------------------------------------------------------
+:local datetime [/system clock get time];
+/tool fetch url="http://192.168.60.1/log/internet\?data=ONLINE" mode=http keep-result=no
+----------------------------------------------------------------------------------------
+
+nama : internet-off
+script:
+----------------------------------------------------------------------------------------
+:local datetime [/system clock get time];
+/tool fetch url="http://192.168.60.1/log/internet\?data=OFFLINE" mode=http keep-result=no
+----------------------------------------------------------------------------------------
