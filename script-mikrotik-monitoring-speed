@@ -1,0 +1,6 @@
+:local sysnumber [/system identity get name]
+/interface monitor-traffic "ether1 - ISP 1" once do={
+ :local upload ((($"tx-bits-per-second")/1024)/1024)
+ :local download ((($"rx-bits-per-second")/1024)/1024)
+ /tool fetch url="http://192.168.60.1/log/bandwidth\?upload=$upload&download=$download" mode=http keep-result=no
+}
