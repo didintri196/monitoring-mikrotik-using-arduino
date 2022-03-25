@@ -12,6 +12,7 @@ Monitoring mikrotik using Arduino + LCD TFT dengan menggunakan interface LAN
  - Mikrotik
  - Arduino UNO
  - Arduino Ethernet Shield W5100
+ - TFT LCD SPFD5408
  - LAN Cable
 
 ## Library Arduino
