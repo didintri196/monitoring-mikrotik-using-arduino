@@ -4,7 +4,7 @@
 Monitoring mikrotik using Arduino + LCD TFT dengan menggunakan interface LAN
 ## Demo
 
-Insert gif or link to demo
+![Logo](https://raw.githubusercontent.com/didintri196/monitoring-mikrotik-using-arduino/master/photo6195189565556371460.jpg)
 
 
 ## Materials
